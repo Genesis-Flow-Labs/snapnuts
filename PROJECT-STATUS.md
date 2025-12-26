@@ -1,13 +1,53 @@
 # Shortcut Content - Project Status
 
 **Last Updated:** December 25, 2025
-**Status:** IDEATION - Defining vision and structure
+**Status:** PAUSED - System built, ready for content creation when priority rises
+
+---
+
+## Latest Update (Dec 25, 2025)
+
+### What Got Done
+- [x] Installed Rectangle (free, open source window manager)
+- [x] Created "Numpad System" - number = division pattern
+- [x] Configured all 10 shortcuts (⌘+Numpad 0-9)
+- [x] Installed Hammerspoon (free, open source) for custom cycling
+- [x] Built extended ⌘+4 cycling (8 positions: fourths + corners)
+- [x] Filed feature request on Rectangle GitHub (#1681)
+- [x] Shared Hammerspoon solution publicly on the issue
+- [x] Maintainer responded - feature exists in Rectangle Pro, open to PRs
+- [x] Issue closed - our solution stands as community resource
+- [x] Documented full journey in `/projects/_journey/`
+- [x] Created ELI5 explanation for ChatGPT handoff
+- [x] Pushed everything to private GitHub repo
+
+### The System (WORKING)
+
+| Shortcut | Action | Handler |
+|----------|--------|---------|
+| ⌘+Numpad 0 | Tile All | Rectangle |
+| ⌘+Numpad 1 | Maximize | Rectangle |
+| ⌘+Numpad 2 | Halves (cycles L↔R) | Rectangle |
+| ⌘+Numpad 3 | Thirds (cycles) | Rectangle |
+| ⌘+Numpad 4 | **Fourths + Corners (8 pos)** | **Hammerspoon** |
+| ⌘+Numpad 5 | Center | Rectangle |
+| ⌘+Numpad 6 | Sixths (cycles) | Rectangle |
+| ⌘+Numpad 7 | Almost Maximize | Rectangle |
+| ⌘+Numpad 8 | Eighths (cycles) | Rectangle |
+| ⌘+Numpad 9 | Ninths (3x3, cycles) | Rectangle |
+
+### GitHub Activity
+- **Feature Request:** https://github.com/rxhanson/Rectangle/issues/1681
+- **Status:** Closed (maintainer responded, pointed to Rectangle Pro)
+- **Our Solution:** Hammerspoon config shared publicly on the issue
 
 ---
 
 ## Vision
 
 Educational short-form content teaching keyboard shortcuts and productivity tips. Platform-agnostic (YouTube Shorts, Instagram Reels, TikTok). Faceless format - value-first, personality optional.
+
+**The Hook:** "The number = the division" - shortcuts that teach themselves.
 
 **Working Title Ideas:**
 - "Shortcut Academy"
@@ -28,52 +68,33 @@ Educational short-form content teaching keyboard shortcuts and productivity tips
 
 ---
 
-## Content Concept
+## Parallel Content Lane
 
-### Format
-- 15-60 second videos
-- Screen recordings + text overlays or voiceover
-- Faceless (optional to show face)
-- One tip per video = high retention
+ChatGPT is coaching a separate content track:
+- **Topic:** Digital Identity / iPhone ID / Trust Infrastructure
+- **Positioning:** "Translator" between systems, regulation, and real people
+- **Strategy:** 1-2 posts/week for 30 days, build signal
 
-### Content Categories
-1. **macOS Native Shortcuts** - Built-in keyboard magic
-2. **App-Specific Shortcuts** - Rectangle, Chrome, VS Code, etc.
-3. **Window Management** - Tiling, snapping, organization
-4. **Hidden Features** - Things people don't know exist
-5. **Workflow Combos** - Chaining shortcuts for power moves
-
-### Why It Works
-- Algorithm loves utility content (high saves/shares)
-- Evergreen - shortcuts don't change often
-- Low production overhead - just screen + audio
-- Scalable - can batch record dozens in one session
+Both lanes prove the same superpower: simplifying complex systems.
 
 ---
 
-## Origin Story
+## What's Built
 
-Born from setting up Rectangle shortcuts:
-- **0** = Tile All (zero mess)
-- **2** = Thirds (two-thirds)
-- **8** = Eighths (obvious)
-
-Pattern recognition: **memorable number associations** = sticky learning
-
----
-
-## Revenue Potential
-
-- **Sponsorships** - Productivity apps, software tools
-- **Affiliate** - Recommend apps like Rectangle, Alfred, Raycast
-- **Digital Products** - Shortcut cheat sheets (PDF), wallpapers with shortcuts
-- **Courses** - "Master macOS in 30 Days" type content
+| Component | Status | Location |
+|-----------|--------|----------|
+| Rectangle config | ✅ Working | macOS defaults |
+| Hammerspoon config | ✅ Working | `~/.hammerspoon/init.lua` |
+| System documentation | ✅ Complete | `RECTANGLE-NUMPAD-SYSTEM.md` |
+| ELI5 explanation | ✅ Complete | `ELI5-RECTANGLE-SYSTEM.md` |
+| Journey log | ✅ Complete | `/projects/_journey/` |
+| GitHub repo | ✅ Private | github.com/shafenkhan/shortcut-content |
 
 ---
 
-## Next Steps
+## What's Pending
 
-### Immediate (Define)
+### Immediate (When Ready)
 - [ ] Name the channel/brand
 - [ ] Pick primary platform (YouTube Shorts vs Reels vs both)
 - [ ] Define CJ's compensation structure
@@ -93,26 +114,24 @@ Pattern recognition: **memorable number associations** = sticky learning
 
 ---
 
-## Tools Needed
-
-| Tool | Purpose |
-|------|---------|
-| Screen recording | QuickTime, OBS, or ScreenFlow |
-| Video editing | CapCut, DaVinci Resolve, or Final Cut |
-| Thumbnails/Graphics | Canva or Figma |
-| Scheduling | Later, Buffer, or native platform tools |
-| Shortcut tracking | This project folder |
-
----
-
 ## Key Files
 
 | File | Purpose |
 |------|---------|
 | `PROJECT-STATUS.md` | This file - overall tracking |
-| `SHORTCUTS-MASTER-LIST.md` | All shortcuts to cover (TBD) |
-| `CONTENT-CALENDAR.md` | What to post when (TBD) |
-| `CJ-ONBOARDING.md` | Instructions for CJ (TBD) |
+| `RECTANGLE-NUMPAD-SYSTEM.md` | Full system design + install script |
+| `ELI5-RECTANGLE-SYSTEM.md` | Simple explanation for content/handoff |
+| `CLAUDE.md` | Quick context for AI assistance |
+
+---
+
+## Tools Used
+
+| Tool | Type | Purpose |
+|------|------|---------|
+| Rectangle | Free, Open Source | Window management (0-3, 5-9) |
+| Hammerspoon | Free, Open Source (MIT) | Custom cycling (4) |
+| GitHub | Free | Version control, community contribution |
 
 ---
 
@@ -120,6 +139,15 @@ Pattern recognition: **memorable number associations** = sticky learning
 
 - **Shafen** - Visionary
 - **CJ** - Integrator (pending onboarding)
+- **Claude Code** - AI pair programmer
+- **ChatGPT** - Social media content coaching
+
+---
+
+## Future Exploration
+
+- **UC-1 (192.168.0.222)** - Local LLM for content automation
+- Could connect ChatGPT coaching → UC-1 → automated content pipeline
 
 ---
 
@@ -129,4 +157,4 @@ Pattern recognition: **memorable number associations** = sticky learning
 - Quality over quantity at first
 - Can be anonymous/faceless - no pressure to be "the face"
 - Test with 10-20 videos before deciding to scale
-
+- "Solve your own problems first" - Aaron Stransky
