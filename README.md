@@ -24,7 +24,7 @@ A free, open source window management system for macOS that uses your numpad as 
 | ⌘ + Numpad 7 | Almost Maximize | 90% screen with breathing room |
 | ⌘ + Numpad 8 | Eighths | Cycles all 8 positions |
 | ⌘ + Numpad 9 | Ninths | 3×3 grid, cycles all 9 |
-| ⌘ + Shift + Numpad 4 | **Sixteenths** | 4×4 grid, cycles all 16 |
+| ⌘ + Option + Numpad 4 | **Sixteenths** | 4×4 grid, cycles all 16 |
 
 ### The Special Sauce: ⌘+4
 
@@ -39,7 +39,7 @@ Presses 1-4 (Fourths):        Presses 5-8 (Corners):
                               └───────┴───────┘
 ```
 
-### Power User Mode: ⌘+Shift+4
+### Power User Mode: ⌘+Option+4
 
 Need even more precision? **4² = 16 positions** in a 4×4 grid:
 
@@ -121,7 +121,7 @@ Copy this to `~/.hammerspoon/init.lua`:
 ```lua
 -- SnapNuts: Extended cycling for window management
 -- ⌘+4: 8 positions (fourths + corners)
--- ⌘+Shift+4: 16 positions (4x4 grid)
+-- ⌘+Option+4: 16 positions (4x4 grid)
 
 -- Helper function to move window
 local function moveToPosition(positions, index)
@@ -156,7 +156,7 @@ hs.hotkey.bind({"cmd"}, "pad4", function()
   moveToPosition(fourPositions, currentFourIndex)
 end)
 
--- ⌘+Shift+4: Sixteenths (4x4 grid = 16 positions)
+-- ⌘+Option+4: Sixteenths (4x4 grid = 16 positions)
 local sixteenPositions = {
   {x = 0,    y = 0,    w = 0.25, h = 0.25},  -- Row 1
   {x = 0.25, y = 0,    w = 0.25, h = 0.25},
@@ -177,7 +177,7 @@ local sixteenPositions = {
 }
 local currentSixteenIndex = 0
 
-hs.hotkey.bind({"cmd", "shift"}, "pad4", function()
+hs.hotkey.bind({"cmd", "alt"}, "pad4", function()
   currentSixteenIndex = (currentSixteenIndex % #sixteenPositions) + 1
   moveToPosition(sixteenPositions, currentSixteenIndex)
 end)
